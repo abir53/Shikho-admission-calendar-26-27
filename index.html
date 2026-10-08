@@ -132,6 +132,7 @@ function setMiniOpen(v){mini.classList.toggle('open',v);mini.setAttribute('aria-
 fab.addEventListener('click',()=>setMiniOpen(!mini.classList.contains('open')));document.getElementById('miniClose').addEventListener('click',()=>setMiniOpen(false));document.getElementById('miniPrev').addEventListener('click',()=>{miniView.setMonth(miniView.getMonth()-1);renderMini()});document.getElementById('miniNext').addEventListener('click',()=>{miniView.setMonth(miniView.getMonth()+1);renderMini()});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mini.classList.contains('open'))setMiniOpen(false)});
 
 document.getElementById('search').addEventListener('input',e=>{state.query=e.target.value;render()});document.getElementById('refreshBtn').onclick=()=>loadLive(true);buildChips();render();loadLive();setInterval(()=>loadLive(false),30*60*1000);
+<!-- Deploy Admission Calendar v4 -->
 </script>
 </body>
 </html>
